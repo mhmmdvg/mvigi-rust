@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --text-base: 15px;
+  --text-base--line-height: 22px;
+}
+
+@layer base {
+  html {
+    @apply text-base antialiased motion-safe:scroll-smooth;
+  }
+
+  /* Firefox: thin is the minimum */
+  @supports not selector(::-webkit-scrollbar) {
+    * {
+      scrollbar-width: thin;
+    }
+  }
+
+  /* Chrome/Safari/WebView: any size */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-gray-300;
+  }
+}
