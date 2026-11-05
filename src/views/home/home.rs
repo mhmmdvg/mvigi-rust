@@ -1,5 +1,5 @@
+use super::components::{ContentContainer, ProfileHeader, ProjectLists};
 use dioxus::prelude::*;
-use super::components::{ProfileHeader, ProjectLists};
 
 /// The Home page component that will be rendered when the current route is `[Route::Home]`
 #[component]
@@ -27,12 +27,21 @@ pub fn Home() -> Element {
                     div {
                         class: "grid grid-cols-2",
                         div {
-                            h3 {
-                                class: "text-black/60",
-                                "Recent Projects"
+                            class: "flex flex-col gap-5",
+                            ContentContainer {
+                                title: "Recent Projects",
+                                content: vec![
+                                    "Glampify",
+                                    "Background Synthesize",
+                                    "URL Capture"
+                                ]
                             }
-                            p {
-                                "Glampify"
+
+                            ContentContainer {
+                                title: "Achievments",
+                                content: vec![
+                                    ""
+                                ]
                             }
                         }
 
@@ -51,12 +60,12 @@ pub fn Home() -> Element {
 
             ProjectLists {
                 projects: vec![
-                    "Project 1".to_string(),
-                    "Project 2".to_string(),
-                    "Project 3".to_string(),
-                    "Project 4".to_string(),
-                    "Project 5".to_string(),
-                    "Project 6".to_string(),
+                    "Project 1",
+                    "Project 2",
+                    "Project 3",
+                    "Project 4",
+                    "Project 5",
+                    "Project 6",
                 ]
             }
         }

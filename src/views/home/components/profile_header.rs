@@ -1,5 +1,5 @@
-use dioxus::prelude::*;
 use crate::components::avatar::{Avatar, AvatarSize};
+use dioxus::prelude::*;
 
 #[derive(Props, Clone, PartialEq, Eq, Debug)]
 pub struct ProfileHeaderProps {
@@ -13,7 +13,7 @@ pub fn ProfileHeader(props: ProfileHeaderProps) -> Element {
         div {
             class: "flex gap-2 items-center",
             Avatar {
-                size: AvatarSize::Large,
+                size: AvatarSize::Medium,
                 src: "https://avatars.githubusercontent.com/u/12345678?v=4".to_string(),
                 alt: "User Avatar".to_string(),
             }

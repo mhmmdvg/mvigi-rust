@@ -20,8 +20,8 @@
 
   /* Chrome/Safari/WebView: any size */
   ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    width: 5px;
+    height: 5px;
   }
   ::-webkit-scrollbar-track {
     background: transparent;
