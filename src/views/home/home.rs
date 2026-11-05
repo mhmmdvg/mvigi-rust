@@ -6,9 +6,9 @@ use dioxus::prelude::*;
 pub fn Home() -> Element {
     rsx! {
         main {
-            class: "flex min-h-dvh flex-col w-full overflow-hidden",
+            class: "flex flex-col w-full overflow-hidden",
             div {
-                class: "flex flex-1 items-center justify-center",
+                class: "flex min-h-[calc(100dvh-3rem)] items-end justify-center pb-16",
                 div {
                     class: "flex w-full max-w-[600px] flex-col gap-6",
                     ProfileHeader {
@@ -38,7 +38,16 @@ pub fn Home() -> Element {
                             }
 
                             ContentContainer {
-                                title: "Achievments",
+                                title: "Recent Projects",
+                                content: vec![
+                                    "Glampify",
+                                    "Background Synthesize",
+                                    "URL Capture"
+                                ]
+                            }
+
+                            ContentContainer {
+                                title: "Achievements",
                                 content: vec![
                                     ""
                                 ]
