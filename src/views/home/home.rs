@@ -8,7 +8,7 @@ pub fn Home() -> Element {
         main {
             class: "flex flex-col w-full overflow-hidden",
             div {
-                class: "flex min-h-[calc(100dvh-3rem)] items-end justify-center pb-16",
+                class: "flex min-h-[calc(100dvh-3rem)] items-end justify-center pb-16 max-sm:px-6 max-sm:pt-24 max-sm:pb-10",
                 div {
                     class: "flex w-full max-w-[600px] flex-col gap-6",
                     ProfileHeader {
@@ -25,7 +25,7 @@ pub fn Home() -> Element {
                     }
 
                     div {
-                        class: "grid grid-cols-2",
+                        class: "grid grid-cols-2 max-sm:gap-4 max-sm:text-sm",
                         div {
                             class: "flex flex-col gap-5",
                             ContentContainer {
@@ -38,7 +38,7 @@ pub fn Home() -> Element {
                             }
 
                             ContentContainer {
-                                title: "Recent Projects",
+                                title: "Labs",
                                 content: vec![
                                     "Glampify",
                                     "Background Synthesize",
